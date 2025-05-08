@@ -1,0 +1,136 @@
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+#contact-name-container,
+#contact-title-container {
+  display: none;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/background.jpg"); /* Image from Unsplash: https://images.unsplash.com/photo-1594671581654-cc7ed83167bb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D */
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.form-container {
+  background-color: #eaf0f2d9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  width: 575px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.75px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input {
+  background-color: rgb(255, 255, 255);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+select {
+  background-size: 1em;
+  cursor: pointer;
+}
+
+button {
+  background-color: #6cabc4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #a4cbd7;
+}
+
+#registrationPhpPage {
+  background-color: #eaf0f2d9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  width: 575px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #registrationPhpPage {
+    width: 60%;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- 
+  -- User Registration Form
+  -- Developed by Lorena Spallino
+  -- May 6, 2025
+  -- For Expat Tax Tools
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="mainBody">
+      <div class="form-container">
+        <h2>User Registration</h2>
+        <form action="registration.php" method="POST" id="registration-form">
+          <!-- Creating the drop-down list for account type -->
+          <div class="form-group">
+            <label for="account_type">Account Type:</label>
+            <select id="account_type" name="account_type">
+              <option value="individual" selected>Individual</option>
+              <option value="company">Company</option>
+            </select>
+          </div>
+
+          <!-- Creating the input for the username field -->
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <div class="error-message" id="usernameError"></div>
+          </div>
+
+          <!-- Creating the input for password field with type 'password' to hide characters-->
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <div class="error-message" id="passwordError"></div>
+          </div>
+
+          <!-- Creating the input for full name field -->
+          <div class="form-group" id="full-name-container">
+            <label for="full_name" id="full_name_label">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" />
+            <div class="error-message" id="fullNameError"></div>
+          </div>
+
+          <div class="company-fields" id="contact-name-container">
+            <div class="form-group">
+              <label for="contact_name">Contact Name:</label>
+              <input type="text" id="contact_name" name="contact_name" />
+              <div class="error-message" id="contactNameError"></div>
+            </div>
+          </div>
+
+          <!-- Creating the input for the contact title if company is chosen in account type field -->
+          <div class="company-fields" id="contact-title-container">
+            <div class="form-group">
+              <label for="contact_title">Contact Title:</label>
+              <input type="text" id="contact_title" name="contact_title" />
+              <div class="error-message" id="contactTitleError"></div>
+            </div>
+          </div>
+
+          <!-- Creating the phone number input with type 'tel' for phone numbers -->
+          <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" />
+            <div class="error-message" id="phoneNumberError"></div>
+          </div>
+
+          <!-- Creating the input for email field -->
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <!-- Submit button to register if information is valid -->
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
