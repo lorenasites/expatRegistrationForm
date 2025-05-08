@@ -154,8 +154,3 @@ registrationForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission if there are errors
   }
 });
-
-/*
-    The following code block gathers relavent html elements, 
-    and will dynamically change the form according to the account type chosen by the user.
-*/
